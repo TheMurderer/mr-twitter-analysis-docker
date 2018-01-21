@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+
+  mongo:
+    image: mongo:3.5
+    ports:
+      - "27017:27017"
+    volumes:
+      - ${HOME}/mongodb:/data/db
+
+  twitterstream:
+    image: raulst/twitterstream
+    volumes:
+      -  ./input_data:/input_data
+   
+  tweetanalysis:
+    image: raulst/tweetanalysis
+    volumes:
+      - ./input_data:/output
+    ports:
+      - "8000:80"
+      - "7180:7180"   # Cloudera Manager
+      - "8888:8888"   # HUE
+    hostname: quickstart.cloudera
+    tty: true
+    links:
+      - mongo
+    depends_on:
+      - mongo
