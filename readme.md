@@ -19,7 +19,7 @@ db.results.find()
 ```
 
 ## Lanzamiento de contenedores
-### Lanzamiento de contenedor de obtención de tweets (twitterstream)
+### Lanzamiento de contenedor de obtención de tweets
 **Nombre del contenedor:** python
 **Estructura del comando**
 ```sh
@@ -38,10 +38,10 @@ Variables de entornos que deben de pasarse como parámetro usando la opción **-
 
 Comando de ejemplo a utilizar: 
 ```sh
-docker-compose run -e DOWNLOAD_TIME=20 -e NAME_FILE_RESULTS=salida5 -e ATKEY=214926193-cC5yxpyNnsZklE8H3xZR6cxxoypebgR74uDUdlvy -e ATSECRET=ltz6SahDXs8vcpNsAVXkCeFmuzXz8slpr9AsiL59gOzTt -e CKEY=OqWdq8I3TPlLxylQzACwGL6EP -e CSECRET=HtqbagAZESpfwjTIcAg2ylIBMTrsAmHRxB3pPT854H12Ywbzjw twitterstream
+docker-compose run -e DOWNLOAD_TIME=20 -e NAME_FILE_RESULTS=salida5 -e ATKEY=214926193-cC5yxpyNnsZklE8H3xZR6cxxoypebgR74uDUdlvy -e ATSECRET=ltz6SahDXs8vcpNsAVXkCeFmuzXz8slpr9AsiL59gOzTt -e CKEY=OqWdq8I3TPlLxylQzACwGL6EP -e CSECRET=HtqbagAZESpfwjTIcAg2ylIBMTrsAmHRxB3pPT854H12Ywbzjw python
 ```
 
-### Lanzamiento de contenedor de cloudera (tweetanalysis)
+### Lanzamiento de contenedor de cloudera
 **Nombre del contenedor:** cloudera
 **Estructura del comando**
 ```sh
@@ -57,7 +57,6 @@ Variables de entornos que deben de pasarse como parámetro usando la opción **-
 
 Comando de ejemplo a utilizar: 
 ```sh
-docker-compose run -e NAME_FILE_RESULTS=salida5 tweetanalysis
+docker-compose run -e NAME_FILE_RESULTS=salida5 cloudera
 ```
-
 
