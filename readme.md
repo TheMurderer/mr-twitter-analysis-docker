@@ -1,6 +1,6 @@
 # Práctica final Cloud Computing
 Master Datascience URJC
-*Author: Raúl Salazar de Torres*
+*Author: Mónica Alexa, Raúl Salazar de Torres*
 
 ## Proceso de ejecución de la práctica
 Primero deberá ejecutarse el contenedor de python para obtener tweets y posteriormente el de cloudera.
